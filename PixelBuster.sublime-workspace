@@ -1,0 +1,492 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"inc",
+				"include"
+			],
+			[
+				"fetch",
+				"fetchArticle"
+			],
+			[
+				"insE",
+				"insEnd"
+			],
+			[
+				"flags",
+				"flagsfile\tstd::ofstream flagsfile"
+			],
+			[
+				"oiT",
+				"oiTfile\tstd::ofstream oiTfile"
+			],
+			[
+				"oiS",
+				"oiSfile"
+			],
+			[
+				"globD",
+				"globDictS\tsparse_hash_map<std::string, unsigned int> globDictS"
+			],
+			[
+				"make_u32",
+				"make_u32regex\tboost::u32regex make_u32regex(const char *p)"
+			],
+			[
+				"s",
+				"sub_match\tsub_match::"
+			],
+			[
+				"all",
+				"allMatches"
+			],
+			[
+				"mod",
+				"mod_s\tboost::regbase::flag_type_ mod_s"
+			],
+			[
+				"cou",
+				"cout\tstd::ostream cout"
+			],
+			[
+				"str",
+				"string"
+			],
+			[
+				"st",
+				"style\tTag"
+			],
+			[
+				"padd",
+				"padding-bottom"
+			],
+			[
+				"backgr",
+				"background-size"
+			],
+			[
+				"bord",
+				"border"
+			],
+			[
+				"background-c",
+				"background-color"
+			],
+			[
+				"re",
+				"repeat"
+			],
+			[
+				"con",
+				"console"
+			],
+			[
+				"crea",
+				"createConnection"
+			],
+			[
+				"pad",
+				"padding-right"
+			],
+			[
+				"padding",
+				"padding-left"
+			],
+			[
+				"inli",
+				"inline-block"
+			],
+			[
+				"backgro",
+				"background-color"
+			],
+			[
+				"bor",
+				"border-right"
+			],
+			[
+				"font",
+				"font-weight"
+			],
+			[
+				"inl",
+				"inline-block"
+			],
+			[
+				"cont",
+				"continue"
+			],
+			[
+				"neu",
+				"neuHeight"
+			],
+			[
+				"alt",
+				"altHeight"
+			],
+			[
+				"Image",
+				"ImageFileName"
+			],
+			[
+				"on",
+				"onlyfiles"
+			],
+			[
+				"pag",
+				"pageY"
+			]
+		]
+	},
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"CSCo",
+				"Cscope: Rebuild database"
+			],
+			[
+				"CTags",
+				"CTags: Rebuild Tags"
+			],
+			[
+				"Package Control: Ins",
+				"Package Control: Install Package"
+			],
+			[
+				"Csco",
+				"Cscope: Rebuild database"
+			],
+			[
+				"CScop",
+				"Cscope: Rebuild database"
+			],
+			[
+				"Defin",
+				"Cscope: Look up global definition"
+			],
+			[
+				"PackageRes",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"HMA",
+				"Ycmd: Create HMAC keys"
+			],
+			[
+				"Y",
+				"Ycmd: Restart ycmd server"
+			],
+			[
+				"ycmd",
+				"Ycmd: Restart ycmd server"
+			],
+			[
+				"safe",
+				"StringEncode: Safe HTML Entitize"
+			],
+			[
+				"ent",
+				"StringEncode: Safe HTML Entitize"
+			],
+			[
+				"enc",
+				"StringEncode: HTML Entitize"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"ena",
+				"Package Control: Enable Package"
+			]
+		],
+		"width": 497.0
+	},
+	"console":
+	{
+		"height": 181.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/dvs23/projects/PixelBuster/PixelBuster.sublime-project",
+		"/home/dvs23/projects/DeTunnelMe/slack.js",
+		"/home/dvs23/oswaldHeer.txt",
+		"/home/dvs23/group3.grp",
+		"/home/dvs23/group2.grp",
+		"/home/dvs23/group.grp",
+		"/home/dvs23/64",
+		"/home/dvs23/Info-AG.txt",
+		"/home/dvs23/packages2.txt",
+		"/home/dvs23/72",
+		"/home/dvs23/75",
+		"/home/dvs23/my.cnf",
+		"/home/dvs23/germany-frankfurt-1-expressvpn.ovpn",
+		"/home/dvs23/germany-frankfurt-expressvpn.ovpn",
+		"/home/dvs23/germany-nuremberg-expressvpn.ovpn",
+		"/home/dvs23/91",
+		"/home/dvs23/daysProc.sql",
+		"/home/dvs23/96",
+		"/home/dvs23/97",
+		"/home/dvs23/98",
+		"/home/dvs23/99",
+		"/home/dvs23/OpenThesaurus.txt",
+		"/home/dvs23/111",
+		"/home/dvs23/someIPv6.txt",
+		"/home/dvs23/122",
+		"/home/dvs23/nmapCCC.txt",
+		"/home/dvs23/137",
+		"/home/dvs23/138",
+		"/home/dvs23/hackthebox3.js",
+		"/home/dvs23/hackthebox2.js",
+		"/home/dvs23/hackthebox1.js",
+		"/home/dvs23/textCompareTest.txt",
+		"/home/dvs23/compareTest.txt",
+		"/home/dvs23/117",
+		"/home/dvs23/58",
+		"/home/dvs23/glw2.sql",
+		"/home/dvs23/glw.sql",
+		"/home/dvs23/53",
+		"/home/dvs23/.config/sublime-text-3/Packages/Default/Default (Linux).sublime-keymap",
+		"/home/dvs23/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
+		"/home/dvs23/50",
+		"/home/dvs23/41",
+		"/home/dvs23/40",
+		"/home/dvs23/39",
+		"/home/dvs23/9",
+		"/home/dvs23/8",
+		"/home/dvs23/7",
+		"/home/dvs23/39.txt",
+		"/home/dvs23/30.txt",
+		"/home/dvs23/21.txt",
+		"/home/dvs23/31.txt",
+		"/home/dvs23/15.txt",
+		"/home/dvs23/16.txt",
+		"/home/dvs23/projects/NewsFetch/cleanNews.py",
+		"/home/dvs23/projects/NewsFetch/rss.txt",
+		"/home/dvs23/projects/NewsFetch/rss.sql",
+		"/home/dvs23/projects/NewsFetch/webLoad.js",
+		"/home/dvs23/projects/NewsFetch/log.txt",
+		"/home/dvs23/sh/fullSqlBackup.sh",
+		"/home/dvs23/projects/WordCount/WC.sql",
+		"/mnt/vc1/db/dump-oiS.sql2",
+		"/home/dvs23/projects/General/main.cpp",
+		"/home/dvs23/projects/main.cpp",
+		"/home/dvs23/projects/General/src/Wort.cpp",
+		"/home/dvs23/projects/WordCount/CppCheckResults.xml",
+		"/home/dvs23/projects/src/WordCount.cpp",
+		"/home/dvs23/projects/WordCount/include/WordCount.h",
+		"/home/dvs23/projects/WordCount/src/WordCount.cpp",
+		"/usr/include/mysql++/beemutex.h",
+		"/home/dvs23/projects/WordCount/CMakeLists.txt",
+		"/home/dvs23/projects/General/include/main.cpp",
+		"/home/dvs23/projects/WordCount/WordCount.sublime-project",
+		"/home/dvs23/projects/General/include/Wort.h",
+		"/home/dvs23/projects/General/to_install/leveldb/include/leveldb/status.h",
+		"/home/dvs23/projects/General/to_install/leveldb/util/options.cc",
+		"/usr/include/leveldb/options.h",
+		"/home/dvs23/.config/sublime-text-3/Packages/Cscope/CscopeSublime.sublime-settings",
+		"/home/dvs23/.config/sublime-text-3/Packages/CTags/CTags.sublime-settings",
+		"/home/dvs23/projects/General/include/LRUCache11.hpp",
+		"/home/dvs23/projects/General/include/Wort.h.orig",
+		"/home/dvs23/projects/General/include/wortMap.h",
+		"/home/dvs23/projects/General/include/wortMap.h.orig",
+		"/home/dvs23/projects/General/src/Wort.cpp.orig",
+		"/home/dvs23/projects/WordCount/src/WordCount.cpp.orig",
+		"/home/dvs23/projects/WordCount/src/TextSlave.cpp.orig",
+		"/home/dvs23/projects/WordCount/src/TextSlave.cpp",
+		"/home/dvs23/projects/WordCount/include/TextSlave.h.orig",
+		"/home/dvs23/projects/WordCount/include/TextSlave.h",
+		"/home/dvs23/projects/General/include/gnuplot-iostream.h",
+		"/home/dvs23/projects/Group/main.cpp",
+		"/home/dvs23/projects/Group/include/DBSCAN.h",
+		"/home/dvs23/projects/Group/include/DBSCAN.h.orig",
+		"/home/dvs23/projects/Group/include/Group.h",
+		"/home/dvs23/projects/Group/include/GroupClient.h",
+		"/home/dvs23/projects/Group/include/GroupMaster.h",
+		"/home/dvs23/projects/Group/include/GroupMaster.h.orig",
+		"/home/dvs23/projects/Group/include/GroupNetwork.h",
+		"/home/dvs23/projects/Group/include/GroupNetwork.h.orig",
+		"/home/dvs23/projects/Group/include/GroupSlave.h",
+		"/home/dvs23/projects/Group/include/GroupSlave.h.orig",
+		"/home/dvs23/projects/Group/include/OPTICS.h",
+		"/home/dvs23/projects/Group/include/OPTICS.h.orig",
+		"/home/dvs23/projects/Group/include/WortLRU.h",
+		"/home/dvs23/projects/Group/include/WortLRU.h.orig",
+		"/home/dvs23/projects/Group/include/sortedList.h",
+		"/home/dvs23/projects/Group/include/sortedList.h.orig",
+		"/home/dvs23/projects/Group/src/DBSCAN.cpp",
+		"/home/dvs23/projects/Group/src/DBSCAN.cpp.orig",
+		"/home/dvs23/projects/Group/src/Group.cpp",
+		"/home/dvs23/projects/Group/src/Group.cpp.orig",
+		"/home/dvs23/projects/Group/src/GroupClient.cpp",
+		"/home/dvs23/projects/Group/src/GroupClient.cpp.orig",
+		"/home/dvs23/projects/Group/src/GroupMaster.cpp",
+		"/home/dvs23/projects/Group/src/GroupMaster.cpp.orig",
+		"/home/dvs23/projects/Group/src/GroupNetwork.cpp",
+		"/home/dvs23/projects/Group/src/GroupNetwork.cpp.orig",
+		"/home/dvs23/projects/Group/src/GroupSlave.cpp",
+		"/home/dvs23/projects/Group/src/GroupSlave.cpp.orig",
+		"/home/dvs23/projects/Group/src/OPTICS.cpp.orig",
+		"/home/dvs23/projects/General/include/concurrentqueue.h",
+		"/home/dvs23/projects/Group/Group.sublime-project",
+		"/home/dvs23/projects/Group/rel.sh",
+		"/home/dvs23/projects/Group/deb.sh",
+		"/home/dvs23/projects/Group/CMakeLists.txt",
+		"/home/dvs23/projects/Group/concurrentqueue.h",
+		"/concurrentqueue.h",
+		"/home/dvs23/.vim/.ycm_extra_conf.py",
+		"/home/dvs23/.config/sublime-text-3/Packages/User/C++.sublime-settings"
+	],
+	"find":
+	{
+		"height": 32.0
+	},
+	"find_in_files":
+	{
+		"height": 164.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"incremental_find":
+	{
+		"height": 32.0
+	},
+	"input":
+	{
+		"height": 60.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.astyle_error_message":
+	{
+		"height": 0.0
+	},
+	"output.exec":
+	{
+		"height": 189.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 156.0
+	},
+	"pinned_build_system": "PB - Release",
+	"replace":
+	{
+		"height": 60.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 392.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 260.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
