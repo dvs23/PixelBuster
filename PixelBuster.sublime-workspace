@@ -4,6 +4,46 @@
 		"selected_items":
 		[
 			[
+				"dequ",
+				"wait_dequeue\tvoid wait_dequeue(U &item)"
+			],
+			[
+				"num",
+				"threadNum"
+			],
+			[
+				"cu",
+				"currIn\tstd::atomic<unsigned int> currIn"
+			],
+			[
+				"iTo",
+				"iToXY\tstd::pair<unsigned int, unsigned int> iToXY(unsigned int i)"
+			],
+			[
+				"he",
+				"hex_lookup\tconst char [17] hex_lookup"
+			],
+			[
+				"scre",
+				"screenHeight\tunsigned int screenHeight"
+			],
+			[
+				"sendT",
+				"sendToSocket\tvoid sendToSocket(unsigned int tid, const std::string &msg)"
+			],
+			[
+				"hex",
+				"hex_lookup"
+			],
+			[
+				"ui",
+				"uint8_t\tuint8_t"
+			],
+			[
+				"thr",
+				"threadNum\tunsigned int threadNum"
+			],
+			[
 				"inc",
 				"include"
 			],
@@ -239,6 +279,9 @@
 	"file_history":
 	[
 		"/home/dvs23/projects/PixelBuster/PixelBuster.sublime-project",
+		"/home/dvs23/projects/PixelBuster/blockingconcurrentqueue.h",
+		"/home/dvs23/projects/PixelBuster/concurrentqueue.h",
+		"/home/dvs23/pixelflut/pixelnuke/pixelnuke.c",
 		"/home/dvs23/projects/DeTunnelMe/slack.js",
 		"/home/dvs23/oswaldHeer.txt",
 		"/home/dvs23/group3.grp",
@@ -362,14 +405,11 @@
 		"/home/dvs23/projects/Group/rel.sh",
 		"/home/dvs23/projects/Group/deb.sh",
 		"/home/dvs23/projects/Group/CMakeLists.txt",
-		"/home/dvs23/projects/Group/concurrentqueue.h",
-		"/concurrentqueue.h",
-		"/home/dvs23/.vim/.ycm_extra_conf.py",
-		"/home/dvs23/.config/sublime-text-3/Packages/User/C++.sublime-settings"
+		"/home/dvs23/projects/Group/concurrentqueue.h"
 	],
 	"find":
 	{
-		"height": 32.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
@@ -399,7 +439,7 @@
 	},
 	"incremental_find":
 	{
-		"height": 32.0
+		"height": 35.0
 	},
 	"input":
 	{
@@ -447,7 +487,7 @@
 	"pinned_build_system": "PB - Release",
 	"replace":
 	{
-		"height": 60.0
+		"height": 66.0
 	},
 	"save_all_on_build": true,
 	"select_file":
