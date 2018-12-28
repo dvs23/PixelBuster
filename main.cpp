@@ -2,6 +2,10 @@
 #include <cstdint>
 #include <atomic>
 #include <thread>
+#include <algorithm>    // std::random_shuffle
+#include <ctime>        // std::time
+#include <cstdlib>      // std::rand, std::srand
+#include <numeric>
 
 #include "lodepng.h"
 
@@ -24,8 +28,8 @@
 unsigned int threadNum = 20;
 unsigned int screenWidth = 1920;
 unsigned int screenHeight = 1080;
-//std::string host = "127.0.0.1";//"151.217.40.82"
-std::string host = "151.217.40.82";
+std::string host = "127.0.0.1";//"151.217.40.82"
+//std::string host = "151.217.40.82";
 //unsigned int port = 1337;//1234
 unsigned int port = 1234;//1234
 const char hex_lookup[] = "0123456789abcdef";
@@ -33,7 +37,6 @@ const char hex_lookup[] = "0123456789abcdef";
 unsigned int startx = 400;
 unsigned int starty = 400;
 
-unsigned int reqPerSend;
 std::vector<int> sockfds;
 std::vector<std::string> imgCmds;//rrggbb -> size 6
 std::vector<unsigned char> image; //the raw pixels
@@ -98,8 +101,7 @@ void sendThread(unsigned int tid, unsigned int from, unsigned int to) {
     connectSock(tid);
 
     while(true) {
-        for(unsigned int i = from; i < to; i++)
-            sendToSocket(tid, imgCmds[i].c_str(), imgCmds[i].length());
+        sendToSocket(tid, imgCmds[tid].c_str(), imgCmds[tid].length());
 
 
         /*for(unsigned int i = 0; i < 1920; i++) {
@@ -111,6 +113,8 @@ void sendThread(unsigned int tid, unsigned int from, unsigned int to) {
 
 
 int main(int argc, char* argv[]) {
+    std::srand(unsigned(std::time(0)));
+
     for(int i = 0; i <= std::max(screenWidth, screenHeight); i++)
         iToStr[i] = std::to_string(i);
 
@@ -134,30 +138,21 @@ int main(int argc, char* argv[]) {
             emptyCounter++;
     }
 
-    reqPerSend = (width * height - emptyCounter) / threadNum;
-
+    std::vector<std::string> tempCMD;
     unsigned int stored = 0;
-    std::string tCmd = "";
 
     for(unsigned int i = 0; i < width * height * 4; i += 4) {
         if(image[i + 3] == 0)
             continue;
 
         std::string temp = iToHex[image[i]] + iToHex[image[i + 1]] + iToHex[image[i + 2]];
-
-
-        tCmd += "PX " + iToStr[startx + (i / 4 % width)] + " " + iToStr[starty + (i / 4 / width)] + " " + temp + "\n";
-        ++stored;
-
-        if(stored >= reqPerSend) {
-            imgCmds.push_back(tCmd);
-            tCmd = "";
-            stored = 0;
-        }
+        tempCMD.push_back("PX " + iToStr[startx + (i / 4 % width)] + " " + iToStr[starty + (i / 4 / width)] + " " + temp + "\n");
     }
 
-    if(tCmd.length() > 0)
-        imgCmds.push_back(tCmd);
+    for(size_t i = 0; i < threadNum; i++) {
+        std::random_shuffle(tempCMD.begin(), tempCMD.end());
+        imgCmds.push_back(std::accumulate(tempCMD.begin(), tempCMD.end(), std::string("")));
+    }
 
     std::vector<std::thread> consumers;
     //sendThread(0, 0, width * height);
