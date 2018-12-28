@@ -15,20 +15,21 @@
 #include <netinet/in.h>
 #include <sys/socket.h>
 #include <unistd.h>
+#include <netinet/tcp.h>
 
 
 //hardcoded parameters
 unsigned int threadNum = 20;
 unsigned int screenWidth = 1920;
 unsigned int screenHeight = 1080;
-//std::string host = "127.0.0.1";//"151.217.40.82"
-std::string host = "151.217.40.82";
-//unsigned int port = 1337;//1234
+std::string host = "127.0.0.1";//"151.217.40.82"
+//std::string host = "151.217.40.82";
 unsigned int port = 1234;//1234
+//unsigned int port = 1234;//1234
 const char hex_lookup[] = "0123456789abcdef";
 
-unsigned int startx = 412;
-unsigned int starty = 832;
+unsigned int startx = 0;
+unsigned int starty = 0;
 
 unsigned int reqPerSend;
 std::vector<int> sockfds;
@@ -54,6 +55,8 @@ void connectSock(unsigned int tid) {
     their_addr.sin_port = htons(port);    /* short, network byte order */
     their_addr.sin_addr = *((struct in_addr*)he->h_addr);
     bzero(&(their_addr.sin_zero), 8);     /* zero the rest of the struct */
+    int one = 1;
+    setsockopt(sockfds[tid], IPPROTO_TCP, TCP_NODELAY, &one, sizeof(one));
 
     if(connect(sockfds[tid], (struct sockaddr*)&their_addr, \
                sizeof(struct sockaddr)) == -1)
@@ -116,14 +119,24 @@ int main(int argc, char* argv[]) {
 
     unsigned error = lodepng::decode(image, width, height, std::string(argv[1]));
     std::cout << width << std::endl << height << std::endl;
+    unsigned int emptyCounter = 0;
 
-    reqPerSend = width * height / threadNum / 20;
+    for(unsigned int i = 0; i < width * height * 4; i += 4) {
+        if(image[i + 3] == 0)
+            emptyCounter++;
+    }
+
+    reqPerSend = (width * height - emptyCounter) / threadNum;
 
     unsigned int stored = 0;
     std::string tCmd = "";
 
     for(unsigned int i = 0; i < width * height * 4; i += 4) {
+        if(image[i + 3] == 0)
+            continue;
+
         std::string temp = iToHex[image[i]] + iToHex[image[i + 1]] + iToHex[image[i + 2]];
+
 
         tCmd += "PX " + iToStr[startx + (i / 4 % width)] + " " + iToStr[starty + (i / 4 / width)] + " " + temp + "\n";
         ++stored;
