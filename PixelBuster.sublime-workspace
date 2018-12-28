@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"sparse",
+				"sparse_hash_set"
+			],
+			[
+				"sparse_has",
+				"sparse_hash_map\tsparse_hash_map<class Key, class T>"
+			],
+			[
 				"dequ",
 				"wait_dequeue\tvoid wait_dequeue(U &item)"
 			],
