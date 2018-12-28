@@ -4,16 +4,32 @@
 		"selected_items":
 		[
 			[
+				"scre",
+				"screenWidth\tunsigned int screenWidth"
+			],
+			[
+				"thre",
+				"threadNum\tunsigned int threadNum"
+			],
+			[
+				"imgC",
+				"imgCmds\tstd::vector<std::string> imgCmds"
+			],
+			[
+				"colo",
+				"colorMapRev"
+			],
+			[
+				"siz",
+				"size_t\tsize_t"
+			],
+			[
 				"fi",
 				"find"
 			],
 			[
 				"sendT",
 				"sendThread\tvoid sendThread(unsigned int tid, unsigned int from, unsigned int to)"
-			],
-			[
-				"colo",
-				"colorMapRev\tsparse_hash_map<std::string, colorNum> colorMapRev"
 			],
 			[
 				"use",
@@ -50,10 +66,6 @@
 			[
 				"he",
 				"hex_lookup\tconst char [17] hex_lookup"
-			],
-			[
-				"scre",
-				"screenHeight\tunsigned int screenHeight"
 			],
 			[
 				"hex",
@@ -433,7 +445,7 @@
 	],
 	"find":
 	{
-		"height": 35.0
+		"height": 44.0
 	},
 	"find_in_files":
 	{
@@ -447,6 +459,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"col"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -512,7 +525,7 @@
 	{
 		"height": 156.0
 	},
-	"pinned_build_system": "PB - Release",
+	"pinned_build_system": "PB - Debug",
 	"replace":
 	{
 		"height": 66.0
