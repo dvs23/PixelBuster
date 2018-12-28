@@ -4,6 +4,26 @@
 		"selected_items":
 		[
 			[
+				"fi",
+				"find"
+			],
+			[
+				"sendT",
+				"sendThread\tvoid sendThread(unsigned int tid, unsigned int from, unsigned int to)"
+			],
+			[
+				"colo",
+				"colorMapRev\tsparse_hash_map<std::string, colorNum> colorMapRev"
+			],
+			[
+				"use",
+				"usedColors\tsparse_hash_set<std::string> usedColors"
+			],
+			[
+				"im",
+				"imgCoded\tstd::vector<colorNum> imgCoded"
+			],
+			[
 				"sparse",
 				"sparse_hash_set"
 			],
@@ -34,10 +54,6 @@
 			[
 				"scre",
 				"screenHeight\tunsigned int screenHeight"
-			],
-			[
-				"sendT",
-				"sendToSocket\tvoid sendToSocket(unsigned int tid, const std::string &msg)"
 			],
 			[
 				"hex",
@@ -488,6 +504,10 @@
 	{
 		"height": 0.0
 	},
+	"output.mdpopups":
+	{
+		"height": 0.0
+	},
 	"output.unsaved_changes":
 	{
 		"height": 156.0
@@ -528,11 +548,11 @@
 	"settings":
 	{
 	},
-	"show_minimap": true,
+	"show_minimap": false,
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 260.0,
+	"side_bar_width": 175.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
