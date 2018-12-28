@@ -17,19 +17,21 @@
 #include <unistd.h>
 #include <netinet/tcp.h>
 
+#include <fcntl.h>
+
 
 //hardcoded parameters
 unsigned int threadNum = 20;
 unsigned int screenWidth = 1920;
 unsigned int screenHeight = 1080;
-std::string host = "127.0.0.1";//"151.217.40.82"
-//std::string host = "151.217.40.82";
+//std::string host = "127.0.0.1";//"151.217.40.82"
+std::string host = "151.217.40.82";
+//unsigned int port = 1337;//1234
 unsigned int port = 1234;//1234
-//unsigned int port = 1234;//1234
 const char hex_lookup[] = "0123456789abcdef";
 
-unsigned int startx = 0;
-unsigned int starty = 0;
+unsigned int startx = 400;
+unsigned int starty = 400;
 
 unsigned int reqPerSend;
 std::vector<int> sockfds;
@@ -57,6 +59,9 @@ void connectSock(unsigned int tid) {
     bzero(&(their_addr.sin_zero), 8);     /* zero the rest of the struct */
     int one = 1;
     setsockopt(sockfds[tid], IPPROTO_TCP, TCP_NODELAY, &one, sizeof(one));
+    long save_fd = fcntl(sockfds[tid], F_GETFL);
+    save_fd |= O_NONBLOCK;
+    fcntl(sockfds[tid], F_SETFL, save_fd);
 
     if(connect(sockfds[tid], (struct sockaddr*)&their_addr, \
                sizeof(struct sockaddr)) == -1)
@@ -68,15 +73,18 @@ void sendToSocket(unsigned int tid, const char* msg, size_t len) { //unsigned in
     unsigned int sent = 0;
 
     do {
-        ret = send(sockfds[tid], msg + sent, len - sent, MSG_NOSIGNAL);
+        ret = send(sockfds[tid], msg + sent, len - sent, MSG_NOSIGNAL | MSG_DONTWAIT);
 
         if(ret == -1) {
-            perror("send");
-
             if(errno == ECONNRESET || errno == EPIPE)
                 connectSock(tid);
+            else if(errno != EAGAIN) {
+                perror("send");
+                break;
+            }
 
-            break;
+            ret = 0;
+
         }
 
 
